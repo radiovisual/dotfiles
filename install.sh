@@ -283,10 +283,6 @@ notify "Install Vault"
 brew install vault
 
 # ---------------------------------------------------------
-notify "Install alfred-doodle-repos"
-npm install --global git+ssh://git@github.com/radiovisual/alfred-doodle-repos.git
-
-# ---------------------------------------------------------
 # ---------------------------------------------------------
 # POST-INSTALL ROUTINE
 # ---------------------------------------------------------
@@ -311,6 +307,12 @@ open -e https://support.1password.com/command-line-getting-started/
 
 echo -e "${check} Add the Snazzy Theme for terminal (Double-click on ~/Downloads/Snazzy.terminal)"
 curl https://raw.githubusercontent.com/sindresorhus/terminal-snazzy/master/Snazzy.terminal > ~/Downloads/Snazzy.terminal
+
+echo -e "${check} Authenticate with GitHub (window opened)"
+open -e https://help.github.com/en/articles/caching-your-github-password-in-git
+
+echo -e "${check} Created a ~/gitprojects directory"
+mkdir ~/gitprojects
 
 # Add some notes about VSCode updates that should happen on a new installation of VSCode
 echo -e "${check} Added the following to /Users/mw/Library/Application\ Support/Code/User/settings.json\n"
