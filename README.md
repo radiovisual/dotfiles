@@ -8,7 +8,7 @@
 
 ### Install Programs
 
-Run this command on a new machine to get to get everything setup just how I like it
+Run this command on a new machine to get everything setup just how I like it
 
 ```
 $ ./install.sh
@@ -16,7 +16,7 @@ $ ./install.sh
 
 ### Sync dotfiles
 
-Run this command to sync dotfiles from this repo to this this machine's `$HOME` directory
+Run this command to sync dotfiles from this repo to this machine's `$HOME` directory
 
 ```
 $ ./sync.sh

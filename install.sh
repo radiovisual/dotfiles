@@ -309,8 +309,8 @@ open -e https://github.com/prettier/prettier-vscode
 echo -e "${check} Verify 1Password CLI Integrity (window opened)"
 open -e https://support.1password.com/command-line-getting-started/
 
-echo -e "${check} Add the Snazzy Theme for iTerm2 (window opened)"
-open -e https://github.com/sindresorhus/iterm2-snazzy/
+echo -e "${check} Add the Snazzy Theme for terminal (Double-click on ~/Dowloads/Snazzy.terminal)"
+curl https://raw.githubusercontent.com/sindresorhus/terminal-snazzy/master/Snazzy.terminal > ~/Downloads/Snazzy.terminal
 
 # Add some notes about VSCode updates that should happen on a new installation of VSCode
 echo -e "${check} add the following to /Users/mw/Library/Application Support/Code/User/settings.json\n"
