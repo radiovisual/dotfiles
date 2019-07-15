@@ -283,8 +283,8 @@ notify "Install Vault"
 brew install vault
 
 # ---------------------------------------------------------
-notify "Install iterm2"
-brew cask install iterm2
+notify "Install alfred-doodle-repos"
+npm install --global git+ssh://git@github.com/radiovisual/alfred-doodle-repos.git
 
 # ---------------------------------------------------------
 # ---------------------------------------------------------
