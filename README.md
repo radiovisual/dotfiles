@@ -1,6 +1,8 @@
 # dotfiles
 
-> Ever wanted to know what it feels like to be me? Use these dotfiles or run the install scripts to find out!
+> Ever wanted to know what it feels like to be me? Use these dotfiles or run the install script to find out!
+
+:warning: :thinking: Please review the scripts in this repo before you blindly run them, though. 
 
 ## Usage
 
@@ -20,9 +22,14 @@ Run this command to sync dotfiles from this repo to this this machine's `$HOME` 
 $ ./sync.sh
 ``` 
 
-## License
+## Inspiration 
 
-MIT
+I pulled some ideas and inspiration from the following dotfiles repos:
+
+- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [ptb/mac-setup](https://github.com/ptb/mac-setup)
+
+---
 
 :hamburger: :rainbow:
 
