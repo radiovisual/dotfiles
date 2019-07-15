@@ -190,3 +190,18 @@ function link_status() {
     echo "\n\033[0;36mGlobal links available to use (via npm): \033[0m\n";
     npm ls -g --depth=0 --link=true;
 }
+
+# Get the SHA256 (BASE64) string of a file's contents
+function sha256() {
+	cat $1 | openssl dgst -sha256 | openssl base64
+}
+
+# Get the SHA384 (BASE64) string of a file's contents
+function sha384() {
+	cat $1 | openssl dgst -sha384 | openssl base64
+}
+
+# Get the SHA512 (BASE64) string of a file's contents
+function sha512() {
+	cat $1 | openssl dgst -sha512 | openssl base64
+}
