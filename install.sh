@@ -313,16 +313,11 @@ echo -e "${check} Add the Snazzy Theme for terminal (Double-click on ~/Downloads
 curl https://raw.githubusercontent.com/sindresorhus/terminal-snazzy/master/Snazzy.terminal > ~/Downloads/Snazzy.terminal
 
 # Add some notes about VSCode updates that should happen on a new installation of VSCode
-echo -e "${check} add the following to /Users/mw/Library/Application Support/Code/User/settings.json\n"
+echo -e "${check} Added the following to /Users/mw/Library/Application\ Support/Code/User/settings.json\n"
+cp config/vscode-settings.json $HOME/Library/Application\ Support/Code/User/settings.json 
+cat config/vscode-settings.json
 
-cat <<HERE
-"javascript.format.enable": true,
-"workbench.colorTheme": "Monokai Pro (Filter Octagon)",
-"eslint.autoFixOnSave": true,
-"eslint.alwaysShowStatus": true,
-"workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
-HERE
-
+# Cleanup old artifacts, modules, etc
 brew cleanup
 
 

@@ -1,0 +1,14 @@
+{
+    "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
+    "window.zoomLevel": 0,
+    "javascript.format.enable": true,
+    "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+    "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "yaml.format.enable": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "git.enableSmartCommit": true
+  }
