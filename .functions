@@ -205,3 +205,14 @@ function sha384() {
 function sha512() {
 	cat $1 | openssl dgst -sha512 | openssl base64
 }
+
+# Kill everything on the given port
+function killport() {
+	pid=$(lsof -ti tcp:$1)
+
+	if [ $? -eq 0 ]; then
+		kill -9 $pid
+	else
+		printf "Nothing to kill on port %s" $1
+	fi
+}
