@@ -1,6 +1,5 @@
 
 export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -21,11 +20,11 @@ ZSH_THEME=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git,
-  zsh-syntax-highlighting,
-  kubectl,
-  zsh-completions
+  git
+  kubectl
 )
+
+source $ZSH/oh-my-zsh.sh
 
 # For Docker Terminal Completion
 fpath=(~/.zsh/completion $fpath)
@@ -38,11 +37,14 @@ prompt pure
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Applications/vault vault
 
-# Install Kubectl helpers
-# https://github.com/superbrothers/zsh-kubectl-prompt
-autoload -U colors; colors
-source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-kubectl-prompt/kubectl.zsh
-RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+# Init the zsh-completions from homebrew
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Kubernetes completion
+source <(kubectl completion zsh)
+
+# init z
+. $HOME/aliases/z.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`

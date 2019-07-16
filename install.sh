@@ -8,6 +8,10 @@ notify() {
 }
 
 # ---------------------------------------------------------
+notify "Install XCode Command Line Tools"
+xcode-select --install
+
+# ---------------------------------------------------------
 # https://brew.sh/
 notify "Install Brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -100,6 +104,16 @@ notify "Install local-csp-reporter"
 npm install -g local-csp-reporter
 
 # ---------------------------------------------------------
+# https://kubernetes.io/docs/tasks/tools/install-kubectl/
+notify "Install Kubernetes"
+brew install kubernetes-cli
+
+# ---------------------------------------------------------
+# https://github.com/turkenh/KubeContext
+notify "Install KubeContext"
+brew cask install kubecontext
+
+# ---------------------------------------------------------
 # https://www.spotify.com/
 notify "Install Spotify"
 brew cask install spotify
@@ -166,10 +180,6 @@ brew install go
 mkdir $HOME/go
 
 # ---------------------------------------------------------
-notify "Install XCode Command Line Tools"
-xcode-select --install
-
-# ---------------------------------------------------------
 # github.com/gini/dexter
 cd $GOPATH/src/github.com/gini/dexter
 notify "Install Dexter"
@@ -186,6 +196,7 @@ brew install bash-completion
 # https://github.com/zsh-users/zsh-syntax-highlighting
 notify "Install zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
+rm -f ~/.zcompdump; compinit
 
 # ---------------------------------------------------------
 # https://github.com/superbrothers/zsh-kubectl-prompt
@@ -283,6 +294,11 @@ notify "Install Vault"
 brew install vault
 
 # ---------------------------------------------------------
+# https://github.com/kevva/wifi-password-cli
+notify "Install wifi-password-cli"
+npm install --global wifi-password-cli
+
+# ---------------------------------------------------------
 # ---------------------------------------------------------
 # POST-INSTALL ROUTINE
 # ---------------------------------------------------------
@@ -310,6 +326,10 @@ curl https://raw.githubusercontent.com/sindresorhus/terminal-snazzy/master/Snazz
 
 echo -e "${check} Authenticate with GitHub (window opened)"
 open -e https://help.github.com/en/articles/caching-your-github-password-in-git
+
+echo -e "${check} Import sensitive dotfiles from 1Password"
+
+echo -e "${check} Import ~/.kube/config into KubeContext"
 
 echo -e "${check} Created a ~/gitprojects directory"
 mkdir ~/gitprojects

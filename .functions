@@ -216,3 +216,9 @@ function killport() {
 		printf "Nothing to kill on port %s" $1
 	fi
 }
+
+# Copies the ASCII shoulder shrug guy to the clipboard. Really important function. 
+function shrug() {
+	echo "Copied ¯\_(ツ)_/¯ to clipboard."
+	echo "¯\_(ツ)_/¯" | pbcopy
+}
