@@ -7,6 +7,10 @@ notify() {
     printf "\033[36m%s\033[0m" "$1"
 }
 
+# Ask for the sudo password up front 
+# (only to be used by the commands that need it)
+sudo -v
+
 # ---------------------------------------------------------
 notify "Install XCode Command Line Tools"
 xcode-select --install
@@ -43,7 +47,7 @@ brew install findutils
 # ---------------------------------------------------------
 notify "Install gnu-sed"
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 
 # ---------------------------------------------------------
 notify "Install bash"
@@ -52,7 +56,7 @@ brew install bash
 
 # ---------------------------------------------------------
 notify "Install Vim"
-brew install vim --with-override-system-vi
+brew install vim
 
 # ---------------------------------------------------------
 # https://github.com/robbyrussell/oh-my-zsh
@@ -63,7 +67,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # https://nodejs.org/
 notify "Install Node"
 brew install node
-brew link node
 
 # ---------------------------------------------------------
 notify "Install tree"
@@ -94,9 +97,9 @@ brew install yarn
 notify "Install n"
 npm install -g n
 
-n 8.16.0
-n 10.16.0
-n latest
+sudo n 8.16.0
+sudo n 10.16.0
+sudo n latest
 
 # ---------------------------------------------------------
 # https://www.npmjs.com/package/local-csp-reporter
@@ -128,10 +131,6 @@ notify "Install youtube-dl"
 brew install youtube-dl
 
 # ---------------------------------------------------------
-notify "Install FFMPEG"
-brew install ptb/custom/ffmpeg
-
-# ---------------------------------------------------------
 # https://1password.com/downloads/mac/
 notify "Install 1Password"
 brew cask install 1password
@@ -156,10 +155,6 @@ notify "Install git"
 brew install git
 
 # ---------------------------------------------------------
-notify "Install unrarx"
-brew install unrarx
-
-# ---------------------------------------------------------
 notify "Install Opera"
 brew cask install opera
 
@@ -180,23 +175,14 @@ brew install go
 mkdir $HOME/go
 
 # ---------------------------------------------------------
-# github.com/gini/dexter
-cd $GOPATH/src/github.com/gini/dexter
-notify "Install Dexter"
-go get -u github.com/gini/dexter
-cd $GOPATH/src/github.com/gini/dexter
-OS=darwin make
-
-# ---------------------------------------------------------
 # https://salsa.debian.org/debian/bash-completion
-notify "Install bash-completion"
-brew install bash-completion
+notify "Install bash-completion2"
+brew install bash-completion2
 
 # ---------------------------------------------------------
 # https://github.com/zsh-users/zsh-syntax-highlighting
 notify "Install zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
-rm -f ~/.zcompdump; compinit
 
 # ---------------------------------------------------------
 # https://github.com/superbrothers/zsh-kubectl-prompt

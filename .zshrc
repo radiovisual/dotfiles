@@ -43,6 +43,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Kubernetes completion
 source <(kubectl completion zsh)
 
+# zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # init z
 . $HOME/aliases/z.sh
 
