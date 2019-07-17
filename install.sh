@@ -313,6 +313,9 @@ curl https://raw.githubusercontent.com/sindresorhus/terminal-snazzy/master/Snazz
 echo -e "${check} Authenticate with GitHub (window opened)"
 open -e https://help.github.com/en/articles/caching-your-github-password-in-git
 
+echo -e "${check} Install Java (window opened)"
+open -e https://www.java.com/en/download/mac_download.jsp
+
 echo -e "${check} Import sensitive dotfiles from 1Password"
 
 echo -e "${check} Import ~/.kube/config into KubeContext"
