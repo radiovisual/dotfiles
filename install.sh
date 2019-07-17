@@ -4,7 +4,7 @@ check="\n\033[36m✔\033[0m"
 
 notify() {
     echo -e "\n"
-    printf "\033[36m%s\033[0m" "$1"
+    printf "\033[36m%s\033[0m\n" "$1"
 }
 
 # Ask for the sudo password up front 
