@@ -193,17 +193,17 @@ function link_status() {
 
 # Get the SHA256 (BASE64) string of a file's contents
 function sha256() {
-	cat $1 | openssl dgst -sha256 | openssl base64
+	echo $(openssl dgst -sha256 -binary $1 | openssl base64 -A)
 }
 
 # Get the SHA384 (BASE64) string of a file's contents
 function sha384() {
-	cat $1 | openssl dgst -sha384 | openssl base64
+	echo $(openssl dgst -sha384 -binary $1 | openssl base64 -A)
 }
 
 # Get the SHA512 (BASE64) string of a file's contents
 function sha512() {
-	cat $1 | openssl dgst -sha512 | openssl base64
+	echo $(openssl dgst -sha512 -binary $1 | openssl base64 -A)
 }
 
 # Kill everything on the given port

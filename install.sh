@@ -285,6 +285,10 @@ notify "Install wifi-password-cli"
 npm install --global wifi-password-cli
 
 # ---------------------------------------------------------
+notify "Install nodemon"
+npm install --global nodemon
+
+# ---------------------------------------------------------
 # ---------------------------------------------------------
 # POST-INSTALL ROUTINE
 # ---------------------------------------------------------
