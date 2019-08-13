@@ -212,7 +212,11 @@ npm install --global generator-nmx
 # ---------------------------------------------------------
 # https://github.com/rupa/z
 notify "Install z"
-git clone git@github.com:rupa/z.git $HOME/aliases/z
+brew install z
+
+# ---------------------------------------------------------
+notify "Install serverless"
+npm install --global serverless
 
 # ---------------------------------------------------------
 # https://github.com/sharkdp/bat
@@ -285,6 +289,40 @@ notify "Install wifi-password-cli"
 npm install --global wifi-password-cli
 
 # ---------------------------------------------------------
+notify "Install ruby"
+brew install ruby
+
+# ---------------------------------------------------------
+# https://github.com/travis-ci/travis.rb
+notify "Install travis"
+gem install travis -v 1.8.10 --no-rdoc --no-ri
+
+# ---------------------------------------------------------
+# https://sdkman.io/install
+notfiy "Install SDKMAN!"
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# ---------------------------------------------------------
+# https://gradle.org/install/#older-releases
+notfiy "Install gradle (2.14.1)"
+sdk install gradle 2.14.1
+
+# ---------------------------------------------------------
+# https://github.com/FiloSottile/mkcert
+notfiy "Install mkcert"
+brew install mkcert
+
+# ---------------------------------------------------------
+# https://github.com/paulirish/git-open
+notify "Install git-open"
+npm install --global git-open
+
+# ---------------------------------------------------------
+notify "Install watch"
+brew install watch
+
+# ---------------------------------------------------------
 # ---------------------------------------------------------
 # POST-INSTALL ROUTINE
 # ---------------------------------------------------------
@@ -309,6 +347,9 @@ open -e https://support.1password.com/command-line-getting-started/
 
 echo -e "${check} Add the Snazzy Theme for terminal (Double-click on ~/Downloads/Snazzy.terminal)"
 curl https://raw.githubusercontent.com/sindresorhus/terminal-snazzy/master/Snazzy.terminal > ~/Downloads/Snazzy.terminal
+
+echo -e "${check} Install Git Lens VSCode Plugin (window opened)"
+open -e https://gitlens.amod.io/
 
 echo -e "${check} Authenticate with GitHub (window opened)"
 open -e https://help.github.com/en/articles/caching-your-github-password-in-git

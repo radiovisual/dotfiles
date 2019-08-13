@@ -46,8 +46,10 @@ source <(kubectl completion zsh)
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# init z
-. $HOME/aliases/z.sh
+export PYTHONPATH="${PYTHONPATH}:/usr/local/lib/python2.7/site-packages"
+
+# init z (which was installed via brew)
+. /usr/local/etc/profile.d/z.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -60,3 +62,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 # added by travis gem
 [ -f /Users/mw/.travis/travis.sh ] && source /Users/mw/.travis/travis.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/mw/.sdkman"
+[[ -s ".sdkman/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source ".sdkman/bin/sdkman-init.sh"
+[[ -s "=/Users/mw/.sdkman/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source "/Users/mw/.sdkman/bin/sdkman-init.sh"
+
+echo "Hello from $HOME/.zshrc"
