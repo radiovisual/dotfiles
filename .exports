@@ -43,3 +43,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 # Add the brew installed coreutils on the $PATH
 # See: https://github.com/mathiasbynens/dotfiles/blob/master/brew.sh#L15
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# Groovy
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
