@@ -59,11 +59,6 @@ notify "Install Vim"
 brew install vim
 
 # ---------------------------------------------------------
-# https://github.com/robbyrussell/oh-my-zsh
-notify "Install oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# ---------------------------------------------------------
 # https://nodejs.org/
 notify "Install Node"
 brew install node
@@ -71,11 +66,6 @@ brew install node
 # ---------------------------------------------------------
 notify "Install tree"
 brew install tree
-
-# ---------------------------------------------------------
-# https://github.com/sindresorhus/pure
-notify "Install Pure Prompt"
-npm install --global pure-prompt
 
 # ---------------------------------------------------------
 # https://www.npmjs.com/package/gulp
@@ -111,10 +101,7 @@ npm install -g local-csp-reporter
 notify "Install Kubernetes"
 brew install kubernetes-cli
 
-# ---------------------------------------------------------
-# https://github.com/turkenh/KubeContext
-notify "Install KubeContext"
-brew cask install kubecontext
+
 
 # ---------------------------------------------------------
 # https://www.spotify.com/
@@ -210,11 +197,6 @@ notify "Install generator-nmx"
 npm install --global generator-nmx
 
 # ---------------------------------------------------------
-# https://github.com/rupa/z
-notify "Install z"
-brew install z
-
-# ---------------------------------------------------------
 notify "Install serverless"
 npm install --global serverless
 
@@ -298,12 +280,6 @@ notify "Install travis"
 gem install travis -v 1.8.10 --no-rdoc --no-ri
 
 # ---------------------------------------------------------
-# https://sdkman.io/install
-notfiy "Install SDKMAN!"
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# ---------------------------------------------------------
 # https://gradle.org/install/#older-releases
 notfiy "Install gradle (2.14.1)"
 sdk install gradle 2.14.1
@@ -325,6 +301,32 @@ brew install watch
 # ---------------------------------------------------------
 notify "Install nodemon"
 npm install --global nodemon
+
+# ---------------------------------------------------------
+# https://github.com/robbyrussell/oh-my-zsh
+notify "Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# ---------------------------------------------------------
+# https://sdkman.io/install
+notfiy "Install SDKMAN!"
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# ---------------------------------------------------------
+# https://github.com/rupa/z
+notify "Install z"
+brew install z
+
+# ---------------------------------------------------------
+# https://github.com/sindresorhus/pure
+notify "Install Pure Prompt"
+npm install --global pure-prompt
+
+# ---------------------------------------------------------
+# https://github.com/turkenh/KubeContext
+notify "Install KubeContext"
+brew cask install kubecontext
 
 # ---------------------------------------------------------
 # ---------------------------------------------------------
