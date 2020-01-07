@@ -1,4 +1,6 @@
 
+echo "Hello from $HOME/.zshrc"
+
 export ZSH=$HOME/.oh-my-zsh
 
 # Load the shell dotfiles, and then some:
@@ -63,9 +65,7 @@ export PYTHONPATH="${PYTHONPATH}:/usr/local/lib/python2.7/site-packages"
 # added by travis gem
 [ -f /Users/mw/.travis/travis.sh ] && source /Users/mw/.travis/travis.sh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/mw/.sdkman"
-[[ -s ".sdkman/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source ".sdkman/bin/sdkman-init.sh"
-[[ -s "=/Users/mw/.sdkman/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source "/Users/mw/.sdkman/bin/sdkman-init.sh"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-echo "Hello from $HOME/.zshrc"
+# Activate jabba
+[ -s "/Users/mw/.jabba/jabba.sh" ] && source "/Users/mw/.jabba/jabba.sh"

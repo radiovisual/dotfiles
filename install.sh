@@ -101,8 +101,6 @@ npm install -g local-csp-reporter
 notify "Install Kubernetes"
 brew install kubernetes-cli
 
-
-
 # ---------------------------------------------------------
 # https://www.spotify.com/
 notify "Install Spotify"
@@ -327,6 +325,28 @@ npm install --global pure-prompt
 # https://github.com/turkenh/KubeContext
 notify "Install KubeContext"
 brew cask install kubecontext
+
+# ---------------------------------------------------------
+# https://helm.sh/docs/using_helm/#installing-helm
+notify "Install Helm"
+brew install kubernetes-helm
+
+# ---------------------------------------------------------
+# https://github.com/shyiko/jabba#installation
+notify "Install jabba"
+curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+
+notify "Install java 1.8"
+jabba install 1.8
+
+# ---------------------------------------------------------
+# https://blog.mattclemente.com/2019/05/31/managing-multiple-java-jdk-versions.html
+notify "Install jenv"
+brew install jenv
+
+# ---------------------------------------------------------
+notify "Install maven"
+brew install maven
 
 # ---------------------------------------------------------
 # ---------------------------------------------------------

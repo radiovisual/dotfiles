@@ -46,3 +46,10 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Groovy
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+# Vault
+export VAULT_ADDR=https://vault.kubernetes.doodle-test.com
+
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

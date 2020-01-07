@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-alias commit-check="gradle DoodleM:test && gradle KalsysM:test && gradle Commons:test && gradle DoodleM:findbugsMain && gradle KalsysM:findbugsMain && gradle Commons:findbugsMain && gradle jslint && gradle karma"
-
 alias ngrok="/Applications/ngrok"
 
 alias commit-check="gradle DoodleM:test && gradle KalsysM:test && gradle Commons:test && gradle DoodleM:findbugsMain && gradle KalsysM:findbugsMain && gradle Commons:findbugsMain && gradle jslint && gradle karma"

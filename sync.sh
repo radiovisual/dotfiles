@@ -16,6 +16,7 @@ copy_dotfile .functions $HOME
 copy_dotfile .exports $HOME
 copy_dotfile .macos $HOME
 copy_dotfile .zshrc $HOME
+copy_dotfile config/.ssh/config $HOME/.ssh/config
 
 source ~/.zshrc
 
