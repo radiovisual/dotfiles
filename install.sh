@@ -83,13 +83,13 @@ notify "Install Yarn"
 brew install yarn
 
 # ---------------------------------------------------------
-# https://github.com/tj/n
-notify "Install n"
-npm install -g n
+# https://github.com/nvm-sh/nvm
+notify "Install nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
-sudo n 8.16.0
-sudo n 10.16.0
-sudo n latest
+nvm install 8.17.0
+nvm install 10.18.0
+nvm install node # will install latest
 
 # ---------------------------------------------------------
 # https://www.npmjs.com/package/local-csp-reporter
