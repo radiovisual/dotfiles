@@ -1,5 +1,5 @@
 
-echo "Hello from $HOME/.zshrc"
+echo "🌈\n"
 
 export ZSH=$HOME/.oh-my-zsh
 
