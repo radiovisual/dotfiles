@@ -222,3 +222,8 @@ function shrug() {
 	echo "Copied ¯\_(ツ)_/¯ to clipboard."
 	echo "¯\_(ツ)_/¯" | pbcopy
 }
+
+vault-staging () {
+    export VAULT_ADDR=https://vault.kubernetes.doodle-test.com
+    vault login $(vault-token-helper get)
+}

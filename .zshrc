@@ -1,12 +1,12 @@
 
-echo "Hello from $HOME/.zshrc"
+echo -e "🍔 🌮 = ❤️\n"
 
 export ZSH=$HOME/.oh-my-zsh
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{functions,exports,aliases}; do
+for file in ~/.{functions,exports,aliases,secrets}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -33,8 +33,12 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 # Overrides the oh-my-zsh theme with the Pure prompt
-autoload -U promptinit; promptinit
-prompt pure
+# autoload -Uz promptinit
+# promptinit
+# prompt pure
+
+# Loads the starship prompt for zsh
+eval "$(starship init zsh)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Applications/vault vault
@@ -69,7 +73,3 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Activate jabba
 [ -s "/Users/mw/.jabba/jabba.sh" ] && source "/Users/mw/.jabba/jabba.sh"
-
-# Activate nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

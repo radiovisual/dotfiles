@@ -318,8 +318,12 @@ brew install z
 
 # ---------------------------------------------------------
 # https://github.com/sindresorhus/pure
-notify "Install Pure Prompt"
-npm install --global pure-prompt
+# notify "Install Pure Prompt"
+# npm install --global pure-prompt
+
+# ---------------------------------------------------------
+# https://starship.rs/
+brew install starship
 
 # ---------------------------------------------------------
 # https://github.com/turkenh/KubeContext
@@ -349,6 +353,23 @@ notify "Install maven"
 brew install maven
 
 # ---------------------------------------------------------
+# https://github.com/joemiller/vault-token-helper
+notify "Install vault-token-helper"
+brew install joemiller/taps/vault-token-helper
+vault-token-helper enable
+
+# ---------------------------------------------------------
+# https://devcenter.heroku.com/articles/heroku-cli
+notify "Install Heroku CLI"
+brew tap heroku/brew && brew install heroku
+heroku autocomplete --refresh-cache
+
+# ---------------------------------------------------------
+notify "Kubelogin"
+brew install int128/kubelogin/kubelogin
+chown -R $(whoami) /usr/local/share/man/man8
+
+# ---------------------------------------------------------
 # ---------------------------------------------------------
 # POST-INSTALL ROUTINE
 # ---------------------------------------------------------
@@ -367,9 +388,6 @@ open -e https://www.monokai.pro/vscode/
 
 echo -e "${check} Install Prettier VSCode Plugin (window opened)"
 open -e https://github.com/prettier/prettier-vscode
-
-echo -e "${check} Verify 1Password CLI Integrity (window opened)"
-open -e https://support.1password.com/command-line-getting-started/
 
 echo -e "${check} Add the Snazzy Theme for terminal (Double-click on ~/Downloads/Snazzy.terminal)"
 curl https://raw.githubusercontent.com/sindresorhus/terminal-snazzy/master/Snazzy.terminal > ~/Downloads/Snazzy.terminal
