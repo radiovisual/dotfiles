@@ -323,6 +323,7 @@ brew install z
 
 # ---------------------------------------------------------
 # https://starship.rs/
+notify "Install starship prompt"
 brew install starship
 
 # ---------------------------------------------------------
